@@ -77,27 +77,27 @@ bandung.drive();
 // create object
 
 class cars {
-  constructor(carName, type, color, engineCapacity, price) {
-    this.carName = carName;
+  constructor(Name, type, color, engineCapacity, price) {
+    this.Name = name;
     this.type = type;
     this.color = color;
     this.engineCapacity = engineCapacity;
     this.price = price;
   }
 
-  getcarName() {
-    return this.carName;
+  getName() {
+    return this.Name;
   }
 
-  gettype() {
+  getType() {
     return this.type;
   }
 
-  getengineCapacity() {
-    return this.engineCapacity;
+  getEngineCapacity() {
+    return this.engineCapacity + "cc";
   }
 
-  getprice() {
+  getPrice() {
     const formattedPrice = new Intl.NumberFormat("id-ID", {
       style: "currency",
       currency: "IDR",
@@ -108,10 +108,10 @@ class cars {
   }
 
   carExplain() {
-    console.log(`This is ${this.carName}, and its type is ${
+    console.log(`This is ${this.Name}, and its type is ${
       this.type
     } has a lot of colors, including ${this.color}.
-     It has big engine capacity ${this.getengineCapacity()} and this is the cheapest model ${this.getprice()}`);
+     It has big engine capacity ${this.getEngineCapacity()} and this is the cheapest model ${this.getprice()}`);
   }
 }
 
