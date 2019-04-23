@@ -106,11 +106,22 @@ class cars {
 
     return formattedPrice;
   }
+
+  carExplain() {
+    console.log(`This is ${this.carName}, and its type is ${
+      this.type
+    } has a lot of colors, including ${this.color}.
+     It has big engine capacity ${
+       this.engineCapacity
+     } and this is the cheapest model ${this.price}`);
+  }
 }
 
 const newCar = new cars("Tesla", "ax100", "red", "2000cc", 200000000);
 
 console.log(newCar);
+
+newCar.carExplain();
 
 document.getElementById("carList").innerHTML = newCar;
 
