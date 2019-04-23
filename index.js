@@ -116,12 +116,18 @@ class cars {
 }
 
 const newCar = new cars("Tesla", "ax100", "red", "2000cc", 200000000);
+const otherCar = new cars("Tesla", "as200", "blue", "500kwh", 2500000);
+const thirdCar = new cars("Tesla", "sw100", "white", "1000kwh", 400000000);
 
 console.log(newCar);
+console.log(otherCar);
 
 newCar.explain();
+otherCar.explain();
 
 document.getElementById("carList").innerText = newCar.explain();
+document.getElementById("carCar").innerText = otherCar.explain();
+document.getElementById("superCar").innerText = thirdCar.explain();
 // extend oop
 
 // class FantasticBeast extends Binatang {
