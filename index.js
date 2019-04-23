@@ -77,11 +77,12 @@ bandung.drive();
 // create object
 
 class cars {
-  constructor(carName, type, color, engineCapacity) {
+  constructor(carName, type, color, engineCapacity, price) {
     this.carName = carName;
     this.type = type;
     this.color = color;
     this.engineCapacity = engineCapacity;
+    this.price = price;
   }
 
   getcarName() {
@@ -95,11 +96,23 @@ class cars {
   getengineCapacity() {
     return this.engineCapacity;
   }
+
+  getprice() {
+    const formattedPrice = new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      minimumFractionDigit: 0
+    }).format(this.price);
+
+    return formattedPrice;
+  }
 }
 
-const newCar = new cars("Tesla", "ax100", "red", "2000cc");
+const newCar = new cars("Tesla", "ax100", "red", "2000cc", 200000000);
 
 console.log(newCar);
+
+document.getElementById("carList").innerHTML = newCar;
 
 // extend oop
 
