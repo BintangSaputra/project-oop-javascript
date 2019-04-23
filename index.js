@@ -36,7 +36,7 @@ class Binatang {
   }
 
   setName(newName) {
-    this, (name = newName);
+    this.newName;
   }
 }
 
@@ -111,9 +111,7 @@ class cars {
     console.log(`This is ${this.carName}, and its type is ${
       this.type
     } has a lot of colors, including ${this.color}.
-     It has big engine capacity ${
-       this.engineCapacity
-     } and this is the cheapest model ${this.price}`);
+     It has big engine capacity ${this.getengineCapacity()} and this is the cheapest model ${this.getprice()}`);
   }
 }
 
@@ -140,6 +138,8 @@ const dragon = new FantasticBeast("Hungarian Horntail", "Dragon");
 
 console.log(dragon);
 
+dragon.fly();
+
 class SuperCar extends cars {
   constructor(carName, technology) {
     super(carName);
@@ -154,8 +154,8 @@ class SuperCar extends cars {
   }
 }
 
-const Esemka = new SuperCar("Esemka 123", "supercharged");
+const esemka = new SuperCar("Esemka 123", "supercharged");
 
-console.log(Esemka);
+console.log(esemka);
 
-Esemka.drive();
+esemka.drive();
