@@ -77,8 +77,8 @@ bandung.drive();
 // create object
 
 class cars {
-  constructor(Name, type, color, engineCapacity, price) {
-    this.Name = name;
+  constructor(name, type, color, engineCapacity, price) {
+    this.name = name;
     this.type = type;
     this.color = color;
     this.engineCapacity = engineCapacity;
@@ -86,7 +86,7 @@ class cars {
   }
 
   getName() {
-    return this.Name;
+    return this.name;
   }
 
   getType() {
@@ -107,11 +107,11 @@ class cars {
     return formattedPrice;
   }
 
-  carExplain() {
-    console.log(`This is ${this.Name}, and its type is ${
+  explain() {
+    return `This is ${this.name}, and its type is ${
       this.type
     } has a lot of colors, including ${this.color}.
-     It has big engine capacity ${this.getEngineCapacity()} and this is the cheapest model ${this.getprice()}`);
+     It has big engine capacity ${this.getEngineCapacity()} and this is the cheapest model ${this.getPrice()}`;
   }
 }
 
@@ -119,26 +119,27 @@ const newCar = new cars("Tesla", "ax100", "red", "2000cc", 200000000);
 
 console.log(newCar);
 
-newCar.carExplain();
+newCar.explain();
 
+document.getElementById("carList").innerText = newCar.explain();
 // extend oop
 
-class FantasticBeast extends Binatang {
-  constructor(name, species) {
-    super(name);
-    this.species = species;
-  }
+// class FantasticBeast extends Binatang {
+//   constructor(name, species) {
+//     super(name);
+//     this.species = species;
+//   }
 
-  fly(destination) {
-    console.log(`${this.name} the ${this.species} is flying to ${destination}`);
-  }
-}
+//   fly(destination) {
+//     console.log(`${this.name} the ${this.species} is flying to ${destination}`);
+//   }
+// }
 
-const dragon = new FantasticBeast("Hungarian Horntail", "Dragon");
+// const dragon = new FantasticBeast("Hungarian Horntail", "Dragon");
 
-console.log(dragon);
+// console.log(dragon);
 
-dragon.fly();
+// dragon.fly();
 
 class SuperCar extends cars {
   constructor(carName, technology) {
