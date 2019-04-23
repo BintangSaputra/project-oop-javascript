@@ -123,8 +123,6 @@ console.log(newCar);
 
 newCar.carExplain();
 
-document.getElementById("carList").innerHTML = newCar;
-
 // extend oop
 
 class FantasticBeast extends Binatang {
